@@ -1,0 +1,68 @@
+@font-face { font-family: 'El Messiri'; src: url('/assets/ElMessiri-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Ebru Text'; src: url('/assets/EbruText-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Ebru Text'; src: url('/assets/EbruText-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+
+:root {
+  --ground: #000;
+  --surface: #0e0e0f;
+  --elevated: #1a1a1c;
+  --text: #f5f2ec;
+  --secondary: #8e8e93;
+  --line: rgba(245, 242, 236, 0.14);
+  --gutter: 20px;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--ground); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ground);
+  color: var(--text);
+  font: 400 17px/1.55 'Ebru Text', system-ui, sans-serif;
+}
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 4px; }
+
+.bar, .foot, .doc { width: 100%; max-width: 720px; margin-inline: auto; padding-inline: var(--gutter); }
+
+.bar { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+.brand { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; font: 600 22px/1 'El Messiri', serif; }
+.brand img { width: 20px; height: 22px; }
+.langs { display: flex; }
+.langs a { min-width: 44px; min-height: 44px; display: grid; place-items: center; color: var(--secondary); text-decoration: none; font-size: 15px; }
+.langs a[aria-current] { color: var(--text); font-weight: 600; }
+
+.hero { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8px var(--gutter) 48px; }
+.hero img { width: min(300px, 68vw, 32svh); height: auto; display: block; }
+.hero h1 { margin: 16px 0 0; font: 600 clamp(44px, 9vw, 64px)/1.2 'El Messiri', serif; }
+.hero .claim { margin: 4px 0 0; font: 600 clamp(22px, 4.6vw, 30px)/1.35 'El Messiri', serif; }
+.hero .sub { margin: 12px 0 0; color: var(--secondary); }
+.store { margin-top: 32px; min-height: 54px; display: inline-flex; align-items: center; padding: 0 32px; border-radius: 27px; background: var(--text); color: #000; font-weight: 600; }
+
+.doc { flex: 1; padding-top: 24px; padding-bottom: 56px; }
+.doc h1 { margin: 0; font: 600 clamp(34px, 7vw, 44px)/1.25 'El Messiri', serif; }
+.doc .stand { margin: 4px 0 32px; color: var(--secondary); font-size: 15px; }
+.doc h2 { margin: 40px 0 8px; font: 600 24px/1.35 'El Messiri', serif; scroll-margin-top: 24px; }
+.doc h3 { margin: 24px 0 4px; font-size: 17px; font-weight: 600; }
+.doc p { margin: 0 0 12px; }
+.doc ul, .doc ol { margin: 0 0 12px; padding-left: 20px; }
+.doc li { margin-bottom: 6px; }
+.doc .lead { font-size: 19px; line-height: 1.5; }
+.doc address { font-style: normal; margin-bottom: 12px; }
+.table { overflow-x: auto; margin: 0 0 12px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.45; }
+th, td { padding: 10px 12px 10px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; }
+
+mark { background: #ff453a; color: #000; padding: 0 4px; border-radius: 4px; font-weight: 600; }
+.note { margin: 8px 0 16px; padding: 10px 12px; border-left: 3px solid #ff453a; background: var(--elevated); font-size: 15px; line-height: 1.45; }
+.note b { color: #ff8a82; font-weight: 600; }
+.preview { background: #ff453a; color: #000; text-align: center; padding: 6px var(--gutter); font-size: 14px; font-weight: 600; }
+
+.foot { display: flex; flex-wrap: wrap; gap: 0 20px; padding-top: 8px; padding-bottom: 24px; border-top: 1px solid var(--line); color: var(--secondary); font-size: 15px; }
+.foot a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+.foot a:hover, .langs a:hover { color: var(--text); }

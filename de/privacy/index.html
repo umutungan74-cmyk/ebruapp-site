@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz · Ebru</title>
+<meta name="description" content="Welche Daten die App Ebru verarbeitet und welche nicht.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/tulip.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="canonical" href="https://ebruapp.com/de/privacy/">
+<link rel="alternate" hreflang="de" href="https://ebruapp.com/de/privacy/">
+<link rel="alternate" hreflang="tr" href="https://ebruapp.com/tr/privacy/">
+<link rel="alternate" hreflang="en" href="https://ebruapp.com/en/privacy/">
+</head>
+<body>
+
+<header class="bar"><a class="brand" href="/de/"><img src="/assets/tulip.svg" alt="" width="20" height="22">Ebru</a><nav class="langs" aria-label="Sprache"><a href="/de/privacy/" lang="de" hreflang="de" aria-current="true">DE</a><a href="/tr/privacy/" lang="tr" hreflang="tr">TR</a><a href="/en/privacy/" lang="en" hreflang="en">EN</a></nav></header>
+<main class="doc"><h1>Datenschutz</h1><p class="stand">Stand: 9. November 2026</p>
+<p class="lead">Ebru speichert deine Gebetsdaten auf deinem Gerät. Ein Server kommt nur ins Spiel, wenn du die Freunde-Funktion ausdrücklich einschaltest.</p>
+
+
+<h2>1. Verantwortlich</h2>
+<p>Umut Resit Ungan</p>
+
+<address>EBRU<br>c/o MDC#2292<br>Welserstraße 3<br>87463 Dietmannsried<br>Deutschland</address>
+<p>E-Mail: <a href="mailto:support@ebruapp.com">support@ebruapp.com</a></p>
+
+<h2>2. Was nur auf deinem Gerät bleibt</h2>
+<ul>
+<li>abgehakte Gebete, Serien, Kaza-Einträge und Lernfortschritt</li>
+<li>dein Name in der App, dein Profilbild und deine Einstellungen</li>
+<li>deine Haltungsvariante und deine Sprache</li>
+</ul>
+<p>Diese Daten erreichen uns nicht. Ein Profilbild wählst du selbst über die Fotoauswahl; es wird nur in der App auf dem Gerät gespeichert. Wenn du die App löschst, sind diese Daten weg.</p>
+
+
+<h2>3. Standort und Qibla</h2>
+<p>Den Standort nutzt Ebru nur, wenn du es erlaubst, und nur solange die App offen ist. Daraus berechnet das Gerät die Gebetszeiten und die Richtung zur Kaaba. Die Koordinaten werden auf dem Gerät gespeichert und nicht an uns oder an Supabase übertragen.</p>
+<p>Um Koordinaten in einen Ortsnamen zu übersetzen oder eine von dir eingegebene Stadt zu finden, nutzt die App den Ortsdienst deines Betriebssystems. Dabei können die Koordinaten oder dein Suchbegriff an Apple (iPhone) oder Google (Android) gehen. Du kannst den Ort auch von Hand eingeben, statt die Ortung zu erlauben.</p>
+
+
+<h2>4. Mitteilungen</h2>
+<p>Gebetszeit-Erinnerungen plant die App lokal auf deinem Gerät. Dafür wird nichts an uns übertragen. Nur wenn du die Freunde-Funktion nutzt, gibt es zusätzlich Push-Mitteilungen (siehe Abschnitt 5).</p>
+
+<h2 id="friends">5. Freunde-Funktion (freiwillig)</h2>
+<p>Die Funktion ist standardmäßig aus. Erst wenn du im Einwilligungs-Bildschirm auf „Einverstanden“ tippst, wird eine Verbindung zum Server aufgebaut und ein anonymes Konto ohne E-Mail, Telefonnummer oder Passwort angelegt. Weil sich aus dem Tagesstand auf deine Religionsausübung schließen lässt, behandeln wir ihn als besondere Kategorie personenbezogener Daten.</p>
+<p><b>Rechtsgrundlage:</b> deine ausdrückliche Einwilligung, Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO. Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen, indem du dein Konto löschst.</p>
+<h3>Was auf dem Server gespeichert wird</h3>
+<ul>
+<li>eine zufällige Konto-ID</li>
+<li>der Name, den du dafür eingibst, und deine Farbe</li>
+<li>App-Sprache, Zeitpunkt der Einwilligung, ob du Premium hast und deine Einstellung zu Freunde-Mitteilungen</li>
+<li>pro Gebetstag nur „geschafft“ (alle fünf Gebete) oder die Rücknahme davon</li>
+<li>Freundschaften, gemeinsame Serie, längste Serie und genutzter Serien-Schutz</li>
+<li>Einladungscodes (7 Tage gültig) und Versuche, einen Code einzulösen (Schutz vor Raten, höchstens etwa 1 Tag)</li>
+<li>gesendete Grüße aus festen Texten; freie Nachrichten gibt es nicht</li>
+<li>dein Push-Token, wenn du Mitteilungen erlaubst</li>
+</ul>
+<h3>Was nie übertragen wird</h3>
+<p>Welches Gebet du wann gebetet hast, wie viele Gebete du an einem Tag abgehakt hast, dein Standort und dein Profilbild.</p>
+<h3>Wer was sieht</h3>
+<p>Nur Personen, mit denen du per Einladungscode befreundet bist, sehen deinen Namen, deine Farbe, die geschafften Tage der letzten 35 Tage und eure gemeinsame Serie. Es gibt kein öffentliches Profil, keine Suche und keine Rangliste. Push-Token und Einstellungen sehen Freunde nicht.</p>
+<h3>Push-Mitteilungen</h3>
+<p>Freunde-Mitteilungen enthalten den Namen und einen festen Text, zum Beispiel „… hat den Tag geschafft.“ Sie werden über den Push-Dienst von Expo und danach über Apple oder Google zugestellt.</p>
+
+<h3>Speicherdauer und Löschung</h3>
+<p>Immer wenn du einen Tag meldest, löscht der Server deine Tagesstände und Grüße, die älter als 35 Tage sind. Meldest du keine Tage mehr, bleiben die vorhandenen Einträge bis zur Löschung deines Kontos gespeichert. Die Zahl der gemeinsamen Serie bleibt so lange bestehen wie die Freundschaft.</p>
+<p>Über <a href="/de/support/#delete">Konto löschen</a> entfernst du dein Konto und alle zugehörigen Daten sofort aus der Datenbank.</p>
+
+
+<h2>6. Abos</h2>
+<p>Käufe und Abos schließt du über den App Store von Apple ab. Zahlungsdaten erhalten wir nicht. Apple verarbeitet sie in eigener Verantwortung. Rechtsgrundlage ist die Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO.</p>
+<p>Für die Verwaltung der Abos setzen wir RevenueCat ein. RevenueCat erhält eine zufällige Nutzerkennung, Angaben zu deinen Käufen und technische Gerätedaten, damit dein Abo erkannt und wiederhergestellt werden kann.</p>
+
+
+<h2>7. App-Updates</h2>
+<p>Die App fragt beim Dienst von Expo nach Aktualisierungen. Dabei werden technisch nötige Daten wie IP-Adresse, App-Version, Plattform und eine zufällige Installationskennung übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einer aktuellen und sicheren App, Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+
+<h2>8. Empfänger und Standorte</h2>
+<div class="table"><table>
+<thead><tr><th>Dienst</th><th>Zweck</th><th>Wann</th></tr></thead>
+<tbody>
+<tr><td>Supabase (Datenbank, Server-Region: eu-west-1 (Ireland, EU))</td><td>Freunde-Funktion</td><td>nur nach Einwilligung</td></tr>
+<tr><td>Expo (650 Industries, USA)</td><td>Push-Zustellung, App-Updates</td><td>Push nur nach Einwilligung, Updates immer</td></tr>
+<tr><td>Apple, Google</td><td>Push-Zustellung, Ortsdienst, App Store</td><td>je nach Nutzung</td></tr>
+<tr><td>RevenueCat (USA)</td><td>Abo-Verwaltung</td><td>nur mit eingebautem Abo</td></tr>
+</tbody></table></div>
+<p>Bei Anbietern außerhalb der EU kann eine Übermittlung in Drittländer stattfinden, insbesondere in die USA.</p>
+
+
+
+<h2>9. Kein Tracking</h2>
+<p>Ebru enthält keine Werbe-, Tracking- oder Analyse-SDKs und erstellt keine Nutzerprofile zu Werbezwecken. Auch diese Webseite verwendet keine Cookies, keine Analyse und keine Dienste für Werbung.</p>
+
+<h2>10. Diese Webseite</h2>
+<p>Die Seite wird bei GitHub Pages (GitHub Inc., USA) gehostet. Beim Aufruf verarbeitet GitHub technisch nötige Daten wie deine IP-Adresse. Schriften und Bilder liegen auf derselben Seite. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+
+<h2>11. Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie das Recht, eine Einwilligung zu widerrufen. Schreib dazu an <a href="mailto:support@ebruapp.com">support@ebruapp.com</a>. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Bayerischen Landesamt für Datenschutzaufsicht.</p>
+
+
+<h2>12. Kinder und Jugendliche</h2>
+<p>Die Freunde-Funktion richtet sich an Personen ab 16 Jahren. Jüngere brauchen dafür die Zustimmung ihrer Eltern.</p>
+
+
+<h2>13. Änderungen</h2>
+<p>Ändert sich die App, passen wir diese Erklärung an. Es gilt die hier veröffentlichte Fassung.</p>
+</main>
+<footer class="foot"><a href="/de/privacy/">Datenschutz</a><a href="/de/imprint/">Impressum</a><a href="/de/terms/">Nutzungsbedingungen</a><a href="/de/support/">Support</a></footer>
+</body>
+</html>
