@@ -19,7 +19,7 @@
 
 <header class="bar"><a class="brand" href="/de/"><img src="/assets/brand-mark.svg" alt="" width="15" height="22">Ebru</a><nav class="langs" aria-label="Sprache"><a href="/de/privacy/" lang="de" hreflang="de" aria-current="true">DE</a><a href="/tr/privacy/" lang="tr" hreflang="tr">TR</a><a href="/en/privacy/" lang="en" hreflang="en">EN</a></nav></header>
 <main class="doc"><h1>Datenschutz</h1><p class="stand">Stand: 15. November 2026</p>
-<p class="lead">Ebru speichert deine Gebetsdaten auf deinem Gerät. Ein Server kommt nur ins Spiel, wenn du die Freunde-Funktion ausdrücklich einschaltest.</p>
+<p class="lead">Deine Gebetsdaten bleiben auf deinem Gerät. Für Käufe, Absturzberichte, die Koran-Rezitation, die Moschee-Suche und anonyme Nutzungszähler nutzt Ebru einige Dienste, die unten einzeln aufgeführt sind. Freunde-Daten gehen nur an unseren Server, wenn du die Freunde-Funktion einschaltest.</p>
 
 
 <h2>1. Verantwortlich</h2>
@@ -30,7 +30,7 @@
 
 <h2>2. Was nur auf deinem Gerät bleibt</h2>
 <ul>
-<li>abgehakte Gebete, Serien, Kaza-Einträge und Lernfortschritt</li>
+<li>abgehakte Gebete, Serien, nachgeholte Gebete (Qada) und Lernfortschritt</li>
 <li>dein Name in der App, dein Profilbild und deine Einstellungen</li>
 <li>deine Haltungsvariante und deine Sprache</li>
 <li>Tage, die du im Periode-Modus als pausiert markierst: Diese Angabe bleibt auf dem Gerät und wird nie übertragen, auch nicht an die Freunde-Funktion.</li>
@@ -40,7 +40,7 @@
 
 <h2>3. Standort und Qibla</h2>
 <p>Den Standort nutzt Ebru nur, wenn du es erlaubst, und nur solange die App offen ist. Daraus berechnet das Gerät die Gebetszeiten und die Richtung zur Kaaba. Die Koordinaten werden auf dem Gerät gespeichert und nicht an uns oder an Supabase übertragen.</p>
-<p>Um Koordinaten in einen Ortsnamen zu übersetzen oder eine von dir eingegebene Stadt zu finden, nutzt die App den Ortsdienst deines Betriebssystems. Dabei können die Koordinaten oder dein Suchbegriff an Apple (iPhone) oder Google (Android) gehen. Du kannst den Ort auch von Hand eingeben, statt die Ortung zu erlauben.</p>
+<p>Um Koordinaten in einen Ortsnamen zu übersetzen oder eine von dir eingegebene Stadt zu finden, nutzt die App den Ortsdienst deines Betriebssystems. Dabei können die Koordinaten oder dein Suchbegriff an Apple (iPhone) oder Google (Android) gehen. Du kannst den Ort auch von Hand eingeben, statt die Ortung zu erlauben. Für die Moschee-Suche siehe Abschnitt 10.</p>
 
 
 <h2>4. Mitteilungen</h2>
@@ -76,44 +76,74 @@
 
 <h2>6. Abos</h2>
 <p>Käufe und Abos schließt du über den App Store von Apple ab. Zahlungsdaten erhalten wir nicht. Apple verarbeitet sie in eigener Verantwortung. Rechtsgrundlage ist die Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO.</p>
-<p>Für die Verwaltung der Abos setzen wir RevenueCat ein. RevenueCat erhält eine zufällige Nutzerkennung, Angaben zu deinen Käufen und technische Gerätedaten, damit dein Abo erkannt und wiederhergestellt werden kann.</p>
+<p>Für die Verwaltung der Abos setzen wir RevenueCat ein. Beim Start fragt die App bei RevenueCat die Preise und deinen Abo-Status ab. RevenueCat erhält dabei eine zufällige Nutzerkennung, die RevenueCat selbst vergibt, Angaben zu deinen Käufen und technische Gerätedaten wie App-Version, Betriebssystem und IP-Adresse, damit dein Abo erkannt und wiederhergestellt werden kann. Nutzt du die Freunde-Funktion, verknüpft die App deine Käufe mit der zufälligen Konto-ID deines Freunde-Kontos, damit unser Server Premium für die Freunde-Funktion bei RevenueCat prüfen kann. Name, Standort und Gebetsdaten erhält RevenueCat nicht.</p>
 
 
 <h2>7. App-Updates</h2>
 <p>Die App fragt beim Dienst von Expo nach Aktualisierungen. Dabei werden technisch nötige Daten wie IP-Adresse, App-Version, Plattform und eine zufällige Installationskennung übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einer aktuellen und sicheren App, Art. 6 Abs. 1 lit. f DSGVO.</p>
 
 
-<h2>8. Empfänger und Standorte</h2>
+<h2 id="crash">8. Absturzberichte</h2>
+<p>Damit wir Abstürze und Fehler finden und beheben können, nutzt die App den Dienst Sentry (Functional Software, Inc., USA) mit Datenspeicherung in der EU-Region. Tritt ein Fehler auf, sendet die App einen Fehlerbericht. Er enthält nur technische Angaben: Art und Stelle des Fehlers im Programmcode, die letzten Schritte in der App davor (zum Beispiel angetippte Bedienelemente und Netzwerkabrufe), App-Version, Betriebssystem, Gerätemodell, Sprache und Zeitzone sowie eine zufällige Kennung der Installation. Beim Senden wird technisch deine IP-Adresse übertragen.</p>
+<p>Nicht enthalten sind eine Nutzerkennung, dein Name, dein Standort, deine Gebetsdaten, Bildschirmfotos und Aufzeichnungen deiner Nutzung. Ausgaben der App-Konsole und Anfragen an den Freunde-Server werden aus den Berichten herausgefiltert. Rechtsgrundlage ist unser berechtigtes Interesse an einer fehlerfreien und sicheren App, Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+
+<h2 id="quran">9. Koran-Rezitation und Übersetzungen</h2>
+<p>Im Koran-Leser spielt die App die Rezitation von Mishary Rashid Alafasy Vers für Vers als Stream von everyayah.com ab. Die deutsche und die englische Übersetzung lädt die App beim ersten Öffnen einer Sure von QuranEnc.com und speichert sie danach auf dem Gerät. Die türkische Übersetzung ist in der App enthalten.</p>
+<p>Einige zusätzliche Suren in derselben Rezitation lädt die App beim ersten Abspielen aus unserem Speicher bei Supabase (Server-Region: eu-west-1 (Ireland, EU)) und speichert sie danach auf dem Gerät. Die Aufnahmen des Hafiz für die Gebetstexte sind in der App enthalten; dafür wird nichts geladen.</p>
+<p>Bei jedem Abruf erhält der jeweilige Dienst technisch nötige Daten wie deine IP-Adresse und welche Datei abgerufen wird, also welche Sure oder welcher Vers. Eine Kennung, dein Name oder Gebetsdaten werden nicht übertragen. Rechtsgrundlage ist unser berechtigtes Interesse, dir die Inhalte bereitzustellen, die du aufrufst, Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+
+<h2 id="mosques">10. Moscheen in der Nähe</h2>
+<p>Auf dem iPhone sucht die App Moscheen in der Nähe über den Kartendienst von Apple (MapKit), aber nur, wenn du die Suche öffnest. Dafür gehen ein Suchwort (zum Beispiel „Moschee“) und dein in der App gespeicherter Ort als Mittelpunkt eines Suchgebiets von etwa 10 km an Apple, nicht an uns. Die Route öffnet Apple Karten.</p>
+<p>Wo diese Liste nicht verfügbar ist, zum Beispiel unter Android, öffnet die App die Karten-App deines Geräts mit Suchwort und Ort. Dann verarbeitet diese App die Angaben nach ihren eigenen Datenschutzbestimmungen.</p>
+
+
+<h2 id="stats">11. Anonyme Nutzungszähler</h2>
+<p>Damit wir Einführung, Premium-Seite und Gebets-Fokus verbessern können, zählt Ebru auf unserem Server (Supabase, Server-Region: eu-west-1 (Ireland, EU)) nur, wie oft an einem Tag</p>
+<ul>
+<li>ein Schritt der Einführung angezeigt und die Einführung abgeschlossen wurde,</li>
+<li>die Einführung statt des Lernpfads den Plan zum regelmäßigen Beten vorgeschlagen hat,</li>
+<li>die Premium-Seite geöffnet (mit Angabe, von wo) oder ein Kauf gestartet wurde,</li>
+<li>der Hinweis auf den Gebets-Fokus angezeigt, angetippt oder angenommen wurde.</li>
+</ul>
+<p>Gespeichert werden nur Tag, Ereignis, Herkunft und die Anzahl. Es gibt keine Kennung, auf deinem Gerät wird dafür nichts gespeichert, und es werden keine einzelnen Antworten, Inhalte, Gebets- oder Lerndaten übertragen. Die IP-Adresse nutzt unsere Funktion nur kurz im Arbeitsspeicher, um zu viele Aufrufe abzuwehren, und speichert sie nicht. Rechtsgrundlage ist unser berechtigtes Interesse an einer verständlichen App, Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+
+<h2>12. Empfänger und Standorte</h2>
 <div class="table"><table>
 <thead><tr><th>Dienst</th><th>Zweck</th><th>Wann</th></tr></thead>
 <tbody>
 <tr><td>Supabase (Datenbank, Server-Region: eu-west-1 (Ireland, EU))</td><td>Freunde-Funktion</td><td>nur nach Einwilligung</td></tr>
-<tr><td>Supabase (Datenbank, Server-Region: eu-west-1 (Ireland, EU))</td><td>Anonyme Nutzungsstatistik (Tageszähler)</td><td>immer, ohne Kennung</td></tr>
+<tr><td>Supabase (Datenbank, Server-Region: eu-west-1 (Ireland, EU))</td><td>Anonyme Nutzungszähler (Tageszähler)</td><td>immer, ohne Kennung</td></tr>
+<tr><td>Supabase (Speicher, Server-Region: eu-west-1 (Ireland, EU))</td><td>Zusätzliche Suren (Rezitation)</td><td>beim ersten Abspielen</td></tr>
 <tr><td>Expo (650 Industries, USA)</td><td>Push-Zustellung, App-Updates</td><td>Push nur nach Einwilligung, Updates immer</td></tr>
-<tr><td>Apple, Google</td><td>Push-Zustellung, Ortsdienst, App Store</td><td>je nach Nutzung</td></tr>
-<tr><td>RevenueCat (USA)</td><td>Abo-Verwaltung</td><td>nur mit eingebautem Abo</td></tr>
+<tr><td>Sentry (Functional Software, USA; Datenregion EU)</td><td>Absturzberichte</td><td>bei Fehlern</td></tr>
+<tr><td>RevenueCat (USA)</td><td>Abo-Verwaltung</td><td>beim App-Start und bei Käufen</td></tr>
+<tr><td>everyayah.com</td><td>Koran-Rezitation (Stream)</td><td>beim Abspielen im Koran-Leser</td></tr>
+<tr><td>QuranEnc.com</td><td>Koran-Übersetzung Deutsch und Englisch</td><td>beim ersten Öffnen einer Sure</td></tr>
+<tr><td>Apple, Google</td><td>Push-Zustellung, Ortsdienst, Moschee-Suche (Apple), App Store</td><td>je nach Nutzung</td></tr>
 </tbody></table></div>
 <p>Bei Anbietern außerhalb der EU kann eine Übermittlung in Drittländer stattfinden, insbesondere in die USA.</p>
 
 
 
-<h2>9. Keine Werbe-Tracker</h2>
-<p>Ebru enthält keine Werbe-, Tracking- oder Analyse-SDKs und erstellt keine Nutzerprofile zu Werbezwecken. Auch diese Webseite verwendet keine Cookies, keine Analyse und keine Dienste für Werbung.</p>
-<p><strong>Anonyme Nutzungsstatistik:</strong> Damit wir Einführung und Premium-Seite verbessern können, zählt Ebru auf unserem Server nur, wie oft an einem Tag ein Schritt der Einführung angezeigt, die Einführung abgeschlossen, die Premium-Seite geöffnet (mit Angabe, von wo) oder ein Kauf gestartet wurde. Dabei gibt es keine Kennung, auf deinem Gerät wird dafür nichts gespeichert, und es werden keine Antworten, Inhalte, Gebets- oder Lerndaten übertragen. Die IP-Adresse wird nur kurz zur Abwehr von Missbrauch im Arbeitsspeicher genutzt und nicht gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einer verständlichen App, Art. 6 Abs. 1 lit. f DSGVO.</p>
+<h2>13. Keine Werbe-Tracker</h2>
+<p>Ebru enthält keine Werbe-, Tracking- oder Analyse-SDKs und erstellt keine Nutzerprofile zu Werbezwecken. Ausgewertet werden nur die Absturzberichte (Abschnitt 8) und die anonymen Zähler (Abschnitt 11). Auch diese Webseite verwendet keine Cookies, keine Analyse und keine Dienste für Werbung.</p>
 
-<h2>10. Diese Webseite</h2>
+<h2>14. Diese Webseite</h2>
 <p>Die Seite wird bei GitHub Pages (GitHub Inc., USA) gehostet. Beim Aufruf verarbeitet GitHub technisch nötige Daten wie deine IP-Adresse. Schriften und Bilder liegen auf derselben Seite. Wählst du oben eine Sprache, merkt sich nur dein Browser diese Wahl (lokaler Speicher, kein Cookie); sie wird nicht an uns übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
 
 
-<h2>11. Deine Rechte</h2>
+<h2>15. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie das Recht, eine Einwilligung zu widerrufen. Schreib dazu an <a href="mailto:support@ebruapp.com">support@ebruapp.com</a>. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Bayerischen Landesamt für Datenschutzaufsicht.</p>
 
 
-<h2>12. Kinder und Jugendliche</h2>
+<h2>16. Kinder und Jugendliche</h2>
 <p>Die Freunde-Funktion richtet sich an Personen ab 16 Jahren. Jüngere brauchen dafür die Zustimmung ihrer Eltern.</p>
 
 
-<h2>13. Änderungen</h2>
+<h2>17. Änderungen</h2>
 <p>Ändert sich die App, passen wir diese Erklärung an. Es gilt die hier veröffentlichte Fassung.</p>
 </main>
 <footer class="foot"><a href="/de/privacy/">Datenschutz</a><a href="/de/imprint/">Impressum</a><a href="/de/terms/">Nutzungsbedingungen</a><a href="/de/support/">Support</a></footer>
