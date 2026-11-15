@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invite to Ebru · Ebru</title>
+<meta name="description" content="You were invited to Ebru. Praying is easier together.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="bar"><a class="brand" href="/"><img src="/assets/brand-mark.svg" alt="" width="15" height="22">Ebru</a></header>
+<main class="hero invite">
+<img src="/assets/tulip.png" width="658" height="658" alt="">
+<h1 id="lead">You were invited to Ebru.</h1>
+<p class="sub" id="sub">Praying is easier together.</p>
+<div id="with-code" class="invite-actions">
+<a class="store" id="open" href="https://apps.apple.com/app/id6832750596">Open in Ebru</a>
+<a class="store secondary" id="store" href="https://apps.apple.com/app/id6832750596">Get it on the App Store</a>
+<p class="code-label" id="code-label">Your code</p>
+<p class="code" id="code"></p>
+<button type="button" class="copy" id="copy">Copy code</button>
+<p class="sub how" id="how">Not installed yet? Get Ebru, then open this link again or enter the code under Friends.</p>
+</div>
+<p class="sub" id="missing" hidden>This link has no invite code. Please ask for a new link.</p>
+</main>
+<script>(function(){
+var T={"de":{"title":"Einladung zu Ebru","lead":"Du wurdest zu Ebru eingeladen.","sub":"Beten ist leichter zu zweit.","open":"In Ebru öffnen","store":"Im App Store laden","codeLabel":"Dein Code","copy":"Code kopieren","copied":"Kopiert","how":"Noch nicht installiert? Lade Ebru, öffne dann diesen Link noch einmal oder gib den Code unter Freunde ein.","missing":"In diesem Link fehlt der Einladungscode. Bitte um einen neuen Link."},"tr":{"title":"Ebru daveti","lead":"Ebru’ya davet edildin.","sub":"Birlikte kılınca namaz daha kolay.","open":"Ebru’da aç","store":"App Store’dan indir","codeLabel":"Kodun","copy":"Kodu kopyala","copied":"Kopyalandı","how":"Henüz yüklü değil mi? Ebru’yu indir, sonra bu bağlantıyı tekrar aç ya da kodu Arkadaşlar bölümünde gir.","missing":"Bu bağlantıda davet kodu yok. Yeni bir bağlantı iste."},"en":{"title":"Invite to Ebru","lead":"You were invited to Ebru.","sub":"Praying is easier together.","open":"Open in Ebru","store":"Get it on the App Store","codeLabel":"Your code","copy":"Copy code","copied":"Copied","how":"Not installed yet? Get Ebru, then open this link again or enter the code under Friends.","missing":"This link has no invite code. Please ask for a new link."}};
+var l=(function(){var l;try{l=localStorage.getItem('ebru.lang')}catch(e){}if(["de","tr","en"].indexOf(l)<0){l=((navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();if(l!=='de'&&l!=='tr')l='en'}return l})();if(!T[l])l='en';var t=T[l];
+document.documentElement.lang=l;document.title=t.title+' · Ebru';
+var raw=new URLSearchParams(location.search).get('c')||'';
+var c=raw.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g,'');
+var ok=/^[A-HJ-NP-Z2-9]{6}([A-HJ-NP-Z2-9]{2})?$/.test(c);
+function set(id,s){var e=document.getElementById(id);if(e)e.textContent=s;}
+set('lead',t.lead);set('sub',t.sub);set('open',t.open);set('store',t.store);set('code-label',t.codeLabel);set('copy',t.copy);set('how',t.how);set('missing',t.missing);
+if(!ok){document.getElementById('with-code').hidden=true;document.getElementById('missing').hidden=false;return;}
+document.getElementById('open').href='ebru://i/'+c;
+set('code',c);
+var b=document.getElementById('copy');
+b.addEventListener('click',function(){
+  var done=function(){set('copy',t.copied);setTimeout(function(){set('copy',t.copy);},1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(c).then(done,function(){});
+  else{var r=document.createRange();r.selectNodeContents(document.getElementById('code'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+});
+})()</script>
+</body>
+</html>

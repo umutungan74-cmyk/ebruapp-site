@@ -6,7 +6,9 @@
 <title>Gizlilik · Ebru</title>
 <meta name="description" content="Ebru uygulamasının hangi verileri işlediği ve işlemediği.">
 <meta name="theme-color" content="#000000">
-<link rel="icon" href="/assets/tulip.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="canonical" href="https://ebruapp.com/tr/privacy/">
 <link rel="alternate" hreflang="de" href="https://ebruapp.com/de/privacy/">
@@ -15,8 +17,8 @@
 </head>
 <body>
 
-<header class="bar"><a class="brand" href="/tr/"><img src="/assets/tulip.svg" alt="" width="20" height="22">Ebru</a><nav class="langs" aria-label="Dil"><a href="/de/privacy/" lang="de" hreflang="de">DE</a><a href="/tr/privacy/" lang="tr" hreflang="tr" aria-current="true">TR</a><a href="/en/privacy/" lang="en" hreflang="en">EN</a></nav></header>
-<main class="doc"><h1>Gizlilik</h1><p class="stand">Son güncelleme: 9 Kasım 2026</p>
+<header class="bar"><a class="brand" href="/tr/"><img src="/assets/brand-mark.svg" alt="" width="15" height="22">Ebru</a><nav class="langs" aria-label="Dil"><a href="/de/privacy/" lang="de" hreflang="de">DE</a><a href="/tr/privacy/" lang="tr" hreflang="tr" aria-current="true">TR</a><a href="/en/privacy/" lang="en" hreflang="en">EN</a></nav></header>
+<main class="doc"><h1>Gizlilik</h1><p class="stand">Son güncelleme: 15 Kasım 2026</p>
 <p class="lead">Ebru namaz verilerini cihazında saklar. Sunucu yalnızca Arkadaşlar özelliğini açıkça etkinleştirirsen devreye girer.</p>
 
 
@@ -30,7 +32,7 @@
 <ul>
 <li>işaretlediğin namazlar, seriler, kaza kayıtları ve öğrenme ilerlemen</li>
 <li>uygulamadaki adın, profil fotoğrafın ve ayarların</li>
-<li>duruş varyantın ve dilin</li>
+<li>Âdet modunda ara verdiğin günler sadece cihazında kalır. Sunucumuza gönderilmez, arkadaşların da göremez.</li>
 </ul>
 <p>Bu veriler bize ulaşmaz. Profil fotoğrafını fotoğraf seçiciyle kendin seçersin; yalnızca cihazındaki uygulamada saklanır. Uygulamayı silersen bu veriler de silinir.</p>
 
@@ -51,16 +53,18 @@
 <li>rastgele bir hesap kimliği</li>
 <li>bu özellik için girdiğin ad ve rengin</li>
 <li>uygulama dili, rıza zamanı, Premium durumun ve arkadaş bildirimi ayarın</li>
-<li>her namaz günü için yalnızca „tamamlandı“ (beş vaktin tümü) bilgisi veya bunun geri alınması</li>
+<li>her namaz günü için „tamamlandı“ (beş vaktin tümü) bilgisi veya bunun geri alınması ve yalnızca „Günlük namaz sayısını paylaş“ seçeneğine izin verirsen işaretlediğin namazların sayısı (0 ile 5 arası bir sayı), hangileri ve ne zaman olduğu değil</li>
+<li>öğrenme yolundaki ilerlemen tek bir sayı olarak („x / y durak“), yalnızca „Öğrenme durumunu arkadaşlarınla paylaş“ seçeneğine izin verirsen; kapatırsan sayı sunucudan silinir</li>
+<li>onayladığın izin metninin sürümü</li>
 <li>arkadaşlıklar, ortak seri, en uzun seri ve kullanılan seri koruması</li>
-<li>davet kodları (7 gün geçerli) ve kod deneme kayıtları (tahmine karşı koruma, en fazla yaklaşık 1 gün)</li>
+<li>davet kodları (tek kullanımlık, en fazla 7 gün geçerli) ve kod deneme kayıtları (tahmine karşı koruma, en fazla yaklaşık 1 gün)</li>
 <li>sabit metinlerden gönderilen selamlar; serbest mesaj yoktur</li>
 <li>bildirimlere izin verirsen anlık bildirim anahtarın (push token)</li>
 </ul>
 <h3>Asla gönderilmeyenler</h3>
-<p>Hangi namazı ne zaman kıldığın, bir günde kaç namazı işaretlediğin, konumun ve profil fotoğrafın.</p>
+<p>Hangi namazı ne zaman kıldığın, hangi metinleri öğrendiğin, konumun ve profil fotoğrafın. Namaz sayısı ve öğrenme ilerlemesi, açıkça izin verene kadar kapalı kalır.</p>
 <h3>Kim neyi görür</h3>
-<p>Yalnızca davet koduyla arkadaş olduğun kişiler adını, rengini, son 35 gündeki tamamlanmış günlerini ve ortak serinizi görür. Herkese açık profil, arama veya sıralama yoktur. Arkadaşların bildirim anahtarını ve ayarlarını göremez.</p>
+<p>Yalnızca davet koduyla arkadaş olduğun kişiler adını, rengini, son 35 gündeki tamamlanmış günlerini ve ortak serinizi görür. İzin verirsen bugün kaç namazı işaretlediğini („3/5“ gibi, saat olmadan) ve öğrenme ilerlemeni („5/22 durak“ gibi) de görürler. Herkese açık profil, arama veya sıralama yoktur. Arkadaşların bildirim anahtarını ve ayarlarını göremez.</p>
 <h3>Anlık bildirimler</h3>
 <p>Arkadaş bildirimleri adı ve sabit bir metni içerir, örneğin „… bugünü tamamladı.“ Expo’nun bildirim hizmeti ve ardından Apple ya da Google üzerinden iletilir.</p>
 
@@ -83,6 +87,7 @@
 <thead><tr><th>Hizmet</th><th>Amaç</th><th>Ne zaman</th></tr></thead>
 <tbody>
 <tr><td>Supabase (veritabanı, sunucu bölgesi: eu-west-1 (Ireland, EU))</td><td>Arkadaşlar özelliği</td><td>yalnızca rızadan sonra</td></tr>
+<tr><td>Supabase (veritabanı, sunucu bölgesi: eu-west-1 (Ireland, EU))</td><td>Anonim kullanım istatistiği (günlük sayaç)</td><td>her zaman, kimliksiz</td></tr>
 <tr><td>Expo (650 Industries, ABD)</td><td>bildirim iletimi, uygulama güncellemeleri</td><td>bildirim yalnızca rızadan sonra, güncellemeler her zaman</td></tr>
 <tr><td>Apple, Google</td><td>bildirim iletimi, konum hizmeti, App Store</td><td>kullanıma göre</td></tr>
 <tr><td>RevenueCat (ABD)</td><td>abonelik yönetimi</td><td>yalnızca abonelik eklendiğinde</td></tr>
@@ -91,11 +96,12 @@
 
 
 
-<h2>9. Takip yok</h2>
+<h2>9. Reklam takibi yok</h2>
 <p>Ebru reklam, takip veya analiz SDK’sı içermez ve reklam amaçlı kullanıcı profili oluşturmaz. Bu web sitesi de çerez, analiz veya reklam hizmeti kullanmaz.</p>
+<p><strong>Anonim kullanım istatistiği:</strong> Tanıtımı ve Premium sayfasını iyileştirebilmek için Ebru sunucumuzda yalnızca bir günde tanıtım adımlarının kaç kez gösterildiğini, tanıtımın tamamlandığını, Premium sayfasının açıldığını (nereden açıldığıyla) veya bir satın almanın başlatıldığını sayar. Kimlik kullanılmaz, cihazında bunun için hiçbir şey saklanmaz; cevaplar, içerikler, namaz veya öğrenme verileri aktarılmaz. IP adresi yalnızca kötüye kullanımı önlemek için kısa süre bellekte kullanılır ve saklanmaz. Hukuki dayanak, anlaşılır bir uygulamaya yönelik meşru menfaatimizdir (GDPR md. 6(1)(f)).</p>
 
 <h2>10. Bu web sitesi</h2>
-<p>Site GitHub Pages’te (GitHub Inc., ABD) barındırılır. Ziyaret ettiğinde GitHub, IP adresin gibi teknik olarak gerekli verileri işler. Yazı tipleri ve görseller aynı sitede bulunur. Hukuki dayanak GDPR md. 6(1)(f)’dir.</p>
+<p>Site GitHub Pages’te (GitHub Inc., ABD) barındırılır. Ziyaret ettiğinde GitHub, IP adresin gibi teknik olarak gerekli verileri işler. Yazı tipleri ve görseller aynı sitede bulunur. Üstte bir dil seçersen bu seçimi yalnızca tarayıcın hatırlar (yerel depolama, çerez değil); bize aktarılmaz. Hukuki dayanak GDPR md. 6(1)(f)’dir.</p>
 
 
 <h2>11. Hakların</h2>
@@ -110,5 +116,6 @@
 <p>Uygulama değişirse bu metni güncelleriz. Burada yayımlanan sürüm geçerlidir.</p>
 </main>
 <footer class="foot"><a href="/tr/privacy/">Gizlilik</a><a href="/tr/imprint/">Künye</a><a href="/tr/terms/">Kullanım koşulları</a><a href="/tr/support/">Destek</a></footer>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.langs a[hreflang]');if(a)try{localStorage.setItem('ebru.lang',a.getAttribute('hreflang'))}catch(x){}})</script>
 </body>
 </html>
