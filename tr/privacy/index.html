@@ -49,36 +49,39 @@
 <p>Namaz vakti hatırlatmalarını uygulama cihazında yerel olarak planlar. Bunun için bize hiçbir şey gönderilmez. Yalnızca Arkadaşlar özelliğini kullanırsan ayrıca anlık bildirimler olur (bkz. bölüm 5).</p>
 
 <h2 id="friends">5. Arkadaşlar özelliği (isteğe bağlı)</h2>
-<p>Bu özellik varsayılan olarak kapalıdır. Yalnızca onay ekranında „Kabul ediyorum“a dokunduğunda sunucuya bağlanılır ve e-posta, telefon numarası veya parola olmadan anonim bir hesap oluşturulur. Günlük durumun dinî pratiğin hakkında bilgi verebileceği için onu özel nitelikli kişisel veri olarak ele alıyoruz.</p>
+<p>Bu özellik varsayılan olarak kapalıdır. Yalnızca onay ekranında „Onayla ve aç“a dokunduğunda sunucuya bağlanılır ve e-posta, telefon numarası veya parola olmadan anonim bir hesap oluşturulur. Günlük durumun dinî pratiğin hakkında bilgi verebileceği için onu özel nitelikli kişisel veri olarak ele alıyoruz.</p>
 <p><b>Hukuki dayanak:</b> açık rızan, GDPR md. 6(1)(a) ve md. 9(2)(a). Hesabını silerek rızanı dilediğin zaman, ileriye dönük olarak geri alabilirsin.</p>
 <h3>Sunucuda saklananlar</h3>
 <ul>
 <li>rastgele bir hesap kimliği</li>
 <li>bu özellik için girdiğin ad ve rengin</li>
 <li>uygulama dili, rıza zamanı, Premium durumun ve arkadaş bildirimi ayarın</li>
-<li>her namaz günü için „tamamlandı“ (beş vaktin tümü) bilgisi veya bunun geri alınması ve yalnızca „Günlük namaz sayısını paylaş“ seçeneğine izin verirsen işaretlediğin namazların sayısı (0 ile 5 arası bir sayı), hangileri ve ne zaman olduğu değil</li>
+<li>her namaz günü için „tamamlandı“ (beş vaktin tümü) bilgisi veya bunun geri alınması ve yalnızca „Günlük namaz sayısını paylaş“ seçeneğine izin verirsen işaretlediğin namazların sayısı (0 ile 5 arası bir sayı), saat olmadan</li>
+<li>yalnızca ayrıca onay verirsen („Arkadaşların bugün hangi namazları işaretlediğini görür“): beş vakitten hangilerini bugün ve dün işaretlediğin, saat olmadan; sunucu bu bilgiyi iki gün sonra siler</li>
 <li>öğrenme yolundaki ilerlemen tek bir sayı olarak („x / y durak“), yalnızca „Öğrenme durumunu arkadaşlarınla paylaş“ seçeneğine izin verirsen; kapatırsan sayı sunucudan silinir</li>
 <li>onayladığın izin metninin sürümü</li>
 <li>arkadaşlıklar, ortak seri, en uzun seri ve kullanılan seri koruması</li>
 <li>davet kodları (tek kullanımlık, en fazla 7 gün geçerli) ve kod deneme kayıtları (tahmine karşı koruma, en fazla yaklaşık 1 gün)</li>
 <li>sabit metinlerden gönderilen selamlar; serbest mesaj yoktur</li>
+<li>bir arkadaşının belirli bir namazına verilen tepkiler (hangi namaz, hangi gün), yalnızca namazlarının görünmesine ikisi de onay vermiş arkadaşlar arasında; sunucu bunları iki gün sonra siler</li>
 <li>bildirimlere izin verirsen anlık bildirim anahtarın (push token)</li>
 </ul>
 <h3>Asla gönderilmeyenler</h3>
-<p>Hangi namazı ne zaman kıldığın, hangi metinleri öğrendiğin, konumun ve profil fotoğrafın. Namaz sayısı ve öğrenme ilerlemesi, açıkça izin verene kadar kapalı kalır.</p>
+<p>Ne zaman kıldığın (saat yok), hangi metinleri öğrendiğin, konumun ve profil fotoğrafın. Namaz sayısı, öğrenme ilerlemesi ve bugün hangi namazları işaretlediğin, açıkça izin verene kadar kapalı kalır.</p>
+
 <h3>Kim neyi görür</h3>
-<p>Yalnızca davet koduyla arkadaş olduğun kişiler adını, rengini, son 35 gündeki tamamlanmış günlerini ve ortak serinizi görür. İzin verirsen bugün kaç namazı işaretlediğini („3/5“ gibi, saat olmadan) ve öğrenme ilerlemeni („5/22 durak“ gibi) de görürler. Herkese açık profil, arama veya sıralama yoktur. Arkadaşların bildirim anahtarını ve ayarlarını göremez.</p>
+<p>Yalnızca davet koduyla arkadaş olduğun kişiler adını, rengini, son 35 gündeki tamamlanmış günlerini ve ortak serinizi görür. İzin verirsen bugün kaç namazı işaretlediğini („3/5“ gibi, saat olmadan) ve öğrenme ilerlemeni („5/22 durak“ gibi) de görürler. Ayrıca onay verdiysen bugün ve dün hangi namazları işaretlediğini saat olmadan görür ve buna tepki verebilirler. Herkese açık profil, arama veya sıralama yoktur. Arkadaşların bildirim anahtarını ve ayarlarını göremez.</p>
 <h3>Anlık bildirimler</h3>
 <p>Arkadaş bildirimleri adı ve sabit bir metni içerir, örneğin „… bugünü tamamladı.“ Expo’nun bildirim hizmeti ve ardından Apple ya da Google üzerinden iletilir.</p>
 
 <h3>Saklama süresi ve silme</h3>
-<p>Bir günü her bildirdiğinde sunucu, 35 günden eski günlük durumlarını ve selamlarını siler. Gün bildirmeyi bırakırsan mevcut kayıtlar hesabını silene kadar kalır. Ortak seri sayısı arkadaşlık sürdüğü müddetçe saklanır.</p>
+<p>Bir günü her bildirdiğinde sunucu, 35 günden eski günlük durumlarını ve selamlarını siler. Gün bildirmeyi bırakırsan mevcut kayıtlar hesabını silene kadar kalır. Hangi namazları işaretlediğin ve bunlara verilen tepkiler bundan bağımsız olarak iki gün sonra silinir. Ortak seri sayısı arkadaşlık sürdüğü müddetçe saklanır.</p>
 <p><a href="/tr/support/#delete">Hesabı sil</a> ile hesabını ve ilgili tüm verileri veritabanından hemen kaldırırsın.</p>
 
 
 <h2>6. Abonelikler</h2>
 <p>Satın alımlar ve abonelikler Apple’ın App Store’u üzerinden yapılır. Ödeme bilgilerini almayız; bunları Apple kendi sorumluluğunda işler. Hukuki dayanak sözleşmenin ifasıdır, GDPR md. 6(1)(b).</p>
-<p>Abonelikleri yönetmek için RevenueCat kullanıyoruz. Uygulama açılırken fiyatları ve abonelik durumunu RevenueCat’ten sorar. Aboneliğinin tanınıp geri yüklenebilmesi için RevenueCat, kendisinin verdiği rastgele bir kullanıcı kimliği, satın alma bilgilerin ve uygulama sürümü, işletim sistemi ve IP adresi gibi teknik cihaz verileri alır. Arkadaşlar özelliğini kullanırsan uygulama satın alımlarını Arkadaşlar hesabının rastgele hesap kimliğine bağlar; böylece sunucumuz Arkadaşlar özelliği için Premium durumunu RevenueCat’te kontrol edebilir. RevenueCat adını, konumunu veya namaz verilerini almaz.</p>
+<p>Abonelikleri yönetmek için RevenueCat kullanıyoruz. Uygulama açılırken fiyatları ve abonelik durumunu RevenueCat’ten sorar. Aboneliğinin tanınıp geri yüklenebilmesi için RevenueCat, kendisinin verdiği rastgele bir kullanıcı kimliği (Arkadaşlar özelliğini kullanırsan bunun yerine Arkadaşlar hesabının rastgele hesap kimliği, aşağıya bak), satın alma bilgilerin ve uygulama sürümü, işletim sistemi ve IP adresi gibi teknik cihaz verileri alır. Arkadaşlar özelliğini kullanırsan uygulama satın alımlarını Arkadaşlar hesabının rastgele hesap kimliğine bağlar; böylece sunucumuz Arkadaşlar özelliği için Premium durumunu RevenueCat’te kontrol edebilir. RevenueCat adını, konumunu veya namaz verilerini almaz.</p>
 
 
 <h2>7. Uygulama güncellemeleri</h2>

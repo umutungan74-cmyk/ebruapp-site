@@ -49,36 +49,39 @@
 <p>The app schedules prayer time reminders locally on your device. Nothing is sent to us for this. Only if you use the Friends feature are there also push notifications (see section 5).</p>
 
 <h2 id="friends">5. Friends feature (optional)</h2>
-<p>This feature is off by default. Only when you tap "I agree" on the consent screen does the app connect to the server and create an anonymous account with no email, phone number or password. Because your daily status can reveal your religious practice, we treat it as a special category of personal data.</p>
+<p>This feature is off by default. Only when you tap "Agree and turn on" on the consent screen does the app connect to the server and create an anonymous account with no email, phone number or password. Because your daily status can reveal your religious practice, we treat it as a special category of personal data.</p>
 <p><b>Legal basis:</b> your explicit consent, Art. 6(1)(a) and Art. 9(2)(a) GDPR. You can withdraw it at any time, with effect for the future, by deleting your account.</p>
 <h3>What is stored on the server</h3>
 <ul>
 <li>a random account ID</li>
 <li>the name you enter for this feature, and your colour</li>
 <li>app language, time of consent, whether you have Premium, and your setting for friend notifications</li>
-<li>for each prayer day, "completed" (all five prayers) or the withdrawal of that status and, only if you allow "Share how many prayers per day", the number of prayers ticked off (a number from 0 to 5), not which ones and not when</li>
+<li>for each prayer day, "completed" (all five prayers) or the withdrawal of that status and, only if you allow "Share how many prayers per day", the number of prayers ticked off (a number from 0 to 5), without times</li>
+<li>only if you agree separately ("Your friends see which prayers you checked off today"): which of the five prayers you ticked off today and yesterday, without times; the server deletes this after two days</li>
 <li>your progress on the learning path as one number ("station x of y"), only if you allow "Share learning progress with friends"; if you turn it off, the number is deleted from the server</li>
 <li>which version of the consent you confirmed</li>
 <li>friendships, shared streak, longest streak and streak protection used</li>
 <li>invite codes (single use, valid for 7 days at most) and attempts to redeem a code (protection against guessing, kept for about 1 day at most)</li>
 <li>greetings sent, from fixed texts only; free-text messages do not exist</li>
+<li>reactions to a specific prayer of a friend (which prayer, on which day), only between friends who both agreed that their prayers are visible; the server deletes them after two days</li>
 <li>your push token, if you allow notifications</li>
 </ul>
 <h3>What is never sent</h3>
-<p>Which prayer you performed and when, which texts you learned, your location and your profile picture. Both the number of prayers and your learning progress stay off until you explicitly allow them.</p>
+<p>When you prayed (no times), which texts you learned, your location and your profile picture. The number of prayers, your learning progress and which prayers you ticked off today stay off until you explicitly allow them.</p>
+
 <h3>Who sees what</h3>
-<p>Only people you are friends with through an invite code can see your name, your colour, your completed days from the last 35 days and your shared streak. If you allow it, they also see how many prayers you ticked off today (e.g. "3/5", without times) and your learning progress (e.g. "station 5/22"). There is no public profile, no search and no leaderboard. Friends cannot see your push token or settings.</p>
+<p>Only people you are friends with through an invite code can see your name, your colour, your completed days from the last 35 days and your shared streak. If you allow it, they also see how many prayers you ticked off today (e.g. "3/5", without times) and your learning progress (e.g. "station 5/22"). If you agreed separately, they also see which prayers you ticked off today and yesterday, without times, and can react to them. There is no public profile, no search and no leaderboard. Friends cannot see your push token or settings.</p>
 <h3>Push notifications</h3>
 <p>Friend notifications contain the name and a fixed text, for example "… completed the day." They are delivered through Expo's push service and then through Apple or Google.</p>
 
 <h3>Retention and deletion</h3>
-<p>Whenever you report a day, the server deletes your daily statuses and greetings older than 35 days. If you stop reporting days, the existing entries remain until you delete your account. The shared streak number remains for as long as the friendship does.</p>
+<p>Whenever you report a day, the server deletes your daily statuses and greetings older than 35 days. If you stop reporting days, the existing entries remain until you delete your account. Which prayers you ticked off, and reactions to them, are deleted by the server after two days regardless. The shared streak number remains for as long as the friendship does.</p>
 <p>With <a href="/en/support/#delete">Delete account</a> you remove your account and all related data from the database immediately.</p>
 
 
 <h2>6. Subscriptions</h2>
 <p>Purchases and subscriptions are made through Apple's App Store. We do not receive payment details. Apple processes them under its own responsibility. The legal basis is performance of a contract, Art. 6(1)(b) GDPR.</p>
-<p>We use RevenueCat to manage subscriptions. When it starts, the app asks RevenueCat for prices and your subscription status. RevenueCat receives a random user identifier that RevenueCat assigns itself, details of your purchases and technical device data such as app version, operating system and IP address, so that your subscription can be recognised and restored. If you use the Friends feature, the app links your purchases to the random account ID of your Friends account, so that our server can check Premium for the Friends feature with RevenueCat. RevenueCat does not receive your name, your location or your prayer data.</p>
+<p>We use RevenueCat to manage subscriptions. When it starts, the app asks RevenueCat for prices and your subscription status. RevenueCat receives a random user identifier that RevenueCat assigns itself (if you use the Friends feature, the random account ID of your Friends account instead, see below), details of your purchases and technical device data such as app version, operating system and IP address, so that your subscription can be recognised and restored. If you use the Friends feature, the app links your purchases to the random account ID of your Friends account, so that our server can check Premium for the Friends feature with RevenueCat. RevenueCat does not receive your name, your location or your prayer data.</p>
 
 
 <h2>7. App updates</h2>

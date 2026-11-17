@@ -49,36 +49,39 @@
 <p>Gebetszeit-Erinnerungen plant die App lokal auf deinem Gerät. Dafür wird nichts an uns übertragen. Nur wenn du die Freunde-Funktion nutzt, gibt es zusätzlich Push-Mitteilungen (siehe Abschnitt 5).</p>
 
 <h2 id="friends">5. Freunde-Funktion (freiwillig)</h2>
-<p>Die Funktion ist standardmäßig aus. Erst wenn du im Einwilligungs-Bildschirm auf „Einverstanden“ tippst, wird eine Verbindung zum Server aufgebaut und ein anonymes Konto ohne E-Mail, Telefonnummer oder Passwort angelegt. Weil sich aus dem Tagesstand auf deine Religionsausübung schließen lässt, behandeln wir ihn als besondere Kategorie personenbezogener Daten.</p>
+<p>Die Funktion ist standardmäßig aus. Erst wenn du im Einwilligungs-Bildschirm auf „Zustimmen und einschalten“ tippst, wird eine Verbindung zum Server aufgebaut und ein anonymes Konto ohne E-Mail, Telefonnummer oder Passwort angelegt. Weil sich aus dem Tagesstand auf deine Religionsausübung schließen lässt, behandeln wir ihn als besondere Kategorie personenbezogener Daten.</p>
 <p><b>Rechtsgrundlage:</b> deine ausdrückliche Einwilligung, Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO. Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen, indem du dein Konto löschst.</p>
 <h3>Was auf dem Server gespeichert wird</h3>
 <ul>
 <li>eine zufällige Konto-ID</li>
 <li>der Name, den du dafür eingibst, und deine Farbe</li>
 <li>App-Sprache, Zeitpunkt der Einwilligung, ob du Premium hast und deine Einstellung zu Freunde-Mitteilungen</li>
-<li>pro Gebetstag „geschafft“ (alle fünf Gebete) oder die Rücknahme davon und, nur wenn du „Anzahl der Gebete pro Tag teilen“ erlaubst, die Anzahl der abgehakten Gebete (eine Zahl von 0 bis 5), nicht welche und nicht wann</li>
+<li>pro Gebetstag „geschafft“ (alle fünf Gebete) oder die Rücknahme davon und, nur wenn du „Anzahl der Gebete pro Tag teilen“ erlaubst, die Anzahl der abgehakten Gebete (eine Zahl von 0 bis 5), ohne Uhrzeit</li>
+<li>nur wenn du gesondert zustimmst („Deine Freunde sehen, welche Gebete du heute abgehakt hast“): welche der fünf Gebete du heute und gestern abgehakt hast, ohne Uhrzeit; der Server löscht diese Angabe nach zwei Tagen</li>
 <li>dein Lernstand im Lernpfad als eine Zahl („Station x von y“), nur wenn du „Lernfortschritt mit Freunden teilen“ erlaubst; schaltest du es aus, wird die Zahl auf dem Server gelöscht</li>
 <li>welche Version der Einwilligung du bestätigt hast</li>
 <li>Freundschaften, gemeinsame Serie, längste Serie und genutzter Serien-Schutz</li>
 <li>Einladungscodes (einmal nutzbar, höchstens 7 Tage gültig) und Versuche, einen Code einzulösen (Schutz vor Raten, höchstens etwa 1 Tag)</li>
 <li>gesendete Grüße aus festen Texten; freie Nachrichten gibt es nicht</li>
+<li>Reaktionen auf ein bestimmtes Gebet eines Freundes (welches Gebet, an welchem Tag), nur zwischen Freunden, die beide zugestimmt haben, dass ihre Gebete sichtbar sind; der Server löscht sie nach zwei Tagen</li>
 <li>dein Push-Token, wenn du Mitteilungen erlaubst</li>
 </ul>
 <h3>Was nie übertragen wird</h3>
-<p>Welches Gebet du wann gebetet hast, welche Texte du gelernt hast, dein Standort und dein Profilbild. Beides, Anzahl und Lernstand, ist aus, bis du es ausdrücklich erlaubst.</p>
+<p>Wann du gebetet hast (keine Uhrzeiten), welche Texte du gelernt hast, dein Standort und dein Profilbild. Anzahl, Lernstand und welche Gebete du heute abgehakt hast sind aus, bis du es ausdrücklich erlaubst.</p>
+
 <h3>Wer was sieht</h3>
-<p>Nur Personen, mit denen du per Einladungscode befreundet bist, sehen deinen Namen, deine Farbe, die geschafften Tage der letzten 35 Tage und eure gemeinsame Serie. Wenn du es erlaubst, sehen sie außerdem, wie viele Gebete du heute abgehakt hast (z. B. „3/5“, ohne Uhrzeit), und deinen Lernstand (z. B. „Station 5/22“). Es gibt kein öffentliches Profil, keine Suche und keine Rangliste. Push-Token und Einstellungen sehen Freunde nicht.</p>
+<p>Nur Personen, mit denen du per Einladungscode befreundet bist, sehen deinen Namen, deine Farbe, die geschafften Tage der letzten 35 Tage und eure gemeinsame Serie. Wenn du es erlaubst, sehen sie außerdem, wie viele Gebete du heute abgehakt hast (z. B. „3/5“, ohne Uhrzeit), und deinen Lernstand (z. B. „Station 5/22“). Hast du gesondert zugestimmt, sehen sie für heute und gestern auch, welche Gebete du abgehakt hast, ohne Uhrzeit, und können darauf reagieren. Es gibt kein öffentliches Profil, keine Suche und keine Rangliste. Push-Token und Einstellungen sehen Freunde nicht.</p>
 <h3>Push-Mitteilungen</h3>
 <p>Freunde-Mitteilungen enthalten den Namen und einen festen Text, zum Beispiel „… hat den Tag geschafft.“ Sie werden über den Push-Dienst von Expo und danach über Apple oder Google zugestellt.</p>
 
 <h3>Speicherdauer und Löschung</h3>
-<p>Immer wenn du einen Tag meldest, löscht der Server deine Tagesstände und Grüße, die älter als 35 Tage sind. Meldest du keine Tage mehr, bleiben die vorhandenen Einträge bis zur Löschung deines Kontos gespeichert. Die Zahl der gemeinsamen Serie bleibt so lange bestehen wie die Freundschaft.</p>
+<p>Immer wenn du einen Tag meldest, löscht der Server deine Tagesstände und Grüße, die älter als 35 Tage sind. Meldest du keine Tage mehr, bleiben die vorhandenen Einträge bis zur Löschung deines Kontos gespeichert. Welche Gebete du abgehakt hast und Reaktionen darauf löscht der Server unabhängig davon nach zwei Tagen. Die Zahl der gemeinsamen Serie bleibt so lange bestehen wie die Freundschaft.</p>
 <p>Über <a href="/de/support/#delete">Konto löschen</a> entfernst du dein Konto und alle zugehörigen Daten sofort aus der Datenbank.</p>
 
 
 <h2>6. Abos</h2>
 <p>Käufe und Abos schließt du über den App Store von Apple ab. Zahlungsdaten erhalten wir nicht. Apple verarbeitet sie in eigener Verantwortung. Rechtsgrundlage ist die Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO.</p>
-<p>Für die Verwaltung der Abos setzen wir RevenueCat ein. Beim Start fragt die App bei RevenueCat die Preise und deinen Abo-Status ab. RevenueCat erhält dabei eine zufällige Nutzerkennung, die RevenueCat selbst vergibt, Angaben zu deinen Käufen und technische Gerätedaten wie App-Version, Betriebssystem und IP-Adresse, damit dein Abo erkannt und wiederhergestellt werden kann. Nutzt du die Freunde-Funktion, verknüpft die App deine Käufe mit der zufälligen Konto-ID deines Freunde-Kontos, damit unser Server Premium für die Freunde-Funktion bei RevenueCat prüfen kann. Name, Standort und Gebetsdaten erhält RevenueCat nicht.</p>
+<p>Für die Verwaltung der Abos setzen wir RevenueCat ein. Beim Start fragt die App bei RevenueCat die Preise und deinen Abo-Status ab. RevenueCat erhält dabei eine zufällige Nutzerkennung, die RevenueCat selbst vergibt (nutzt du die Freunde-Funktion, stattdessen die zufällige Konto-ID deines Freunde-Kontos, siehe unten), Angaben zu deinen Käufen und technische Gerätedaten wie App-Version, Betriebssystem und IP-Adresse, damit dein Abo erkannt und wiederhergestellt werden kann. Nutzt du die Freunde-Funktion, verknüpft die App deine Käufe mit der zufälligen Konto-ID deines Freunde-Kontos, damit unser Server Premium für die Freunde-Funktion bei RevenueCat prüfen kann. Name, Standort und Gebetsdaten erhält RevenueCat nicht.</p>
 
 
 <h2>7. App-Updates</h2>
